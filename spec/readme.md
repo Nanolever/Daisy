@@ -29,7 +29,7 @@ The main dinstinct feature of Daisy are its 2 high precision Sigma-Delta ADCs, e
 #define ADC2_DATA GPIO_NUM_14
 #define ADC2_CLOCK GPIO_NUM_15
 ```
-![Example Image](../images/Load_cells_wiring.png)
+![Example Image](../images/Load_cells_wiring.jpg)
 Using the software provided in the folder "lib" of this repo its possible to manage up to 4 load cells with high precision at 80 samples per second.
 ## Features
 Daisy also provides an RS485 channel for serial protocol communication (ex: Modbus), a Can channel for Can-based protocols (Ex: CanOpen) and a RTC powered by an onboard battery.
