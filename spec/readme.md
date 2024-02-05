@@ -8,6 +8,7 @@ Daisy presents 6 digital inputs working at 24V:
 #define I4 GPIO_NUM_36  
 #define I5 GPIO_NUM_39  
 ```
+![Example Image](../images/Input_wiring.jpg)
 They can be used for example to control sensors, buttons and switches.
 ## Outputs
 Daisy presents 7 digital outputs working at 24V:
@@ -20,6 +21,7 @@ Daisy presents 7 digital outputs working at 24V:
 #define Q5 GPIO_NUM_2   
 #define Q6 GPIO_NUM_0   
 ```
+![Example Image](../images/Output_wiring.jpg)
 They can be used for example to control motors, lights and relè.
 ## Load cells
 The main dinstinct feature of Daisy are its 2 high precision Sigma-Delta ADCs, each featuring 2 PGA channels, for a total of 4 possible load cells controlled at the same time.
@@ -38,3 +40,4 @@ Daisy also provides an RS485 channel for serial protocol communication (ex: Modb
 #define RS485_RX GPIO_NUM_16    //uart 2 rx
 #define RS485_EN GPIO_NUM_5
 ```
+![Example Image](../images/Modbus_wiring.jpg)
