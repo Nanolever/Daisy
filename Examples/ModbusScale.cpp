@@ -1,22 +1,23 @@
 /* 
-Autore: Fabbri Simone
-Data: 14/11/2022
-Titolo: Condizionatore di segnale celle di carico Modbus
-Descrizione: Si implementa un condizionatore di segnale di 4 celle di carico in grado di condividere i dati via Modbus
-Ultime modifiche: 
-Comandi Modpoll utili:
--dyrectory: cd C:\Users\fabbr\Downloads\modpoll-3.10\win
--richiesta dati: modpoll -b 9600 -p none -m rtu -a 1 -r 1 -c 13 COM4
--scrittura pesoCalib: modpoll -b 9600 -p none -m rtu -a 1 -r 12 COM4 5000
--richiesta tara: modpoll -b 9600 -p none -m rtu -a 1 -r 1 -t 0 COM4 1
--richiesta calibrazione: modpoll -b 9600 -p none -m rtu -a 1 -r 9 -t 0 COM4 1
-*Problemi:
-    -Un dato su due scartato per settare il guadagno (possibile lettura alternata?)
+Author: Simone Fabbri
+Date: 11/14/2022
+Title: Modbus Load Cell Signal Conditioner
+Description: A signal conditioner for 4 load cells is implemented capable of sharing data via Modbus
+Latest modifications:
+Useful Modpoll commands:
+
+Directory: cd C:\Users\fabbr\Downloads\modpoll-3.10\win
+Data request: modpoll -b 9600 -p none -m rtu -a 1 -r 1 -c 13 COM4
+Writing calibration weight: modpoll -b 9600 -p none -m rtu -a 1 -r 12 COM4 5000
+Requesting tare: modpoll -b 9600 -p none -m rtu -a 1 -r 1 -t 0 COM4 1
+Requesting calibration: modpoll -b 9600 -p none -m rtu -a 1 -r 9 -t 0 COM4 1
+*Issues:
+-Every other data discarded to set gain (possible alternate reading?)
 ToDo:
-    1. Differenziare celle staccate da celle attaccate;
-    2. Modificare libreria HX711 per lettura dei due canali (no due Hx711, ma un HX711 con due canali);
-    3. Gestire logging multithreading su scheda microSd;
-    4. Comprendere eventuali situazioni di default.
+Differentiate disconnected cells from connected cells;
+Modify HX711 library for reading the two channels (not two HX711, but one HX711 with two channels);
+Manage multithreading logging on microSD card;
+Understand any default situations.
 */
 
 //INCLUSIONE LIBRERIE
