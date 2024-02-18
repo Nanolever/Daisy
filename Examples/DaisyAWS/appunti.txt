@@ -1,0 +1,6 @@
+Per settare il codice occorre:
+1. Definire SSID e Password del WiFi: riga 60 di "subscribe_publish_sample.c";
+2. Definire l'ENDPOINT: riga 408 di "sdkconfig.h";
+3. Copiare file Certificate in "certificate.pem.crt";
+4. Copiare file Private Key in "private.pem.key";
+5. Configurare il CLIENT ID: riga 51 di "sdkconfig.h";
